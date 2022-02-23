@@ -1,0 +1,12 @@
+click==8.0.3
+colorama==0.4.4
+config==0.5.1
+Flask==2.0.3
+importlib-metadata==4.11.1
+itsdangerous==2.0.1
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+python-dotenv==0.19.2
+typing-extensions==4.1.1
+Werkzeug==2.0.3
+zipp==3.7.0
