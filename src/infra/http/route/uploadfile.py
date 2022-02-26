@@ -1,16 +1,16 @@
 from flask import jsonify,request
 from src.infra.utility.http import Http
 import src.infra.http.auth as auth
-import controller.uploadfile as uploadfile
+import src.controller.uploadfile as uploadfile
 import flask
 
 
 def route(app: flask.app.Flask):
-    @app.route('/importfile', methods=['POST'])
+    @app.route('/uploadfile', methods=['POST'])
     @auth.requires_auth
     def request_post_import():
         try:
-            response = uploadfile.upload_file(request)
+            response = uploadfile.uploadfile(request)
 
             return jsonify(response), 200
 
