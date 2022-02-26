@@ -2,12 +2,12 @@ import pandas as pd
 import os
 import json
 
-def avg_car_make():
+def avg_city():
    
     target = os.getcwd() + '/files/dataset.csv'
 
     df = pd.read_csv(target)
-    groupby_avg = df.groupby(['car_make']).median()
+    groupby_avg = df.groupby(['city']).median()
 
     avg_value_car_make = groupby_avg['car_value']
 
