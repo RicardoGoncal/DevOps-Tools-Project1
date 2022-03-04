@@ -4,7 +4,6 @@ from urllib import response
 
 def list_files_path():
 
-    id = 0
     data = {}
    
     target = os.getcwd() + '/files'
@@ -14,8 +13,9 @@ def list_files_path():
         list_files.remove('.gitkeep')
 
     for item in list_files:
-        id += 1
-        key = "id_"+ str(id)
+
+        id = item.split('_')[0]
+        key = str(id)
         d = {key: str(item)}
         data.update(d)
 
